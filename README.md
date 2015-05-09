@@ -12,3 +12,18 @@ Se va a añadir proyectos de eclipse relacionados entre si para poder realizar l
 ## Que puede faltar u objetivos...
   - Para empezar, una clase que utilice la la clase SerieHistorica(por ejemplo,una libreria de utiles matematicas) y poder embeberla,claro...
   - Una SerieHistoricaSuperior que herede de la primera SerieHistorica y poder embeberla...
+
+## Donde está?
+El codigo está integro en: https://github.com/pvalienteverde/BoostPython
+
+Los pasos a seguir:
+  1. Ejectuar en el directorio dodne tengas los workspace de eclipse
+      `git clone https://github.com/pvalienteverde/BoostPython.git`
+  2. Crear un proyecto eclipse en la carpeta **BoostPython**
+  3. Por ultimo: 
+      4.1 File ->Import
+      4.2 Git-> Proyects from git
+      4.3 Seleccionamos la misma carpeta dodne está los proyectos y automaticamente tendremos toda la configuracion preparada para trabajar
+
+  
+  
