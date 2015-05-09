@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../scr/recubrimiento_clases.cpp 
+../scr/rc_datetime.cpp 
 
 OBJS += \
-./scr/recubrimiento_clases.o 
+./scr/rc_datetime.o 
 
 CPP_DEPS += \
-./scr/recubrimiento_clases.d 
+./scr/rc_datetime.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

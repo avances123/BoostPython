@@ -1,4 +1,4 @@
-#include "../include/recubrimiento_clases.h"
+#include "../include/rc_datetime.h"
 
 using namespace boost::python;
 
@@ -54,7 +54,7 @@ template<> void datetime2ptime<boost::posix_time::ptime>::construct(
 }
 }
 
-BOOST_PYTHON_MODULE(recubrimiento_clases)
+BOOST_PYTHON_MODULE(rc_datetime)
 {
 	PyDateTime_IMPORT;
 
@@ -65,6 +65,8 @@ BOOST_PYTHON_MODULE(recubrimiento_clases)
 	def("tomorrow", python_boost_date_time::tomorrow);
 	//Con el metodo day_before hemos asegurado que los conversores funcion una vez definimos
 	def("day_before", python_boost_date_time::day_before, args("moment"));
+
+
 
 }
 

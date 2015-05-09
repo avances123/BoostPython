@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import datetime
-import recubrimiento_clases as rc
+import rc_datetime as rc
 import __future__
 
 # Definimos 

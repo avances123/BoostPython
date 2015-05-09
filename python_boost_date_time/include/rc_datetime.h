@@ -1,12 +1,12 @@
 /*
- * recubrimiento_clases.h
+ * rc_datetime.h
  *
  *  Created on: May 9, 2015
  *      Author: pedro
  */
 
-#ifndef INCLUDE_RECUBRIMIENTO_CLASES_H_
-#define INCLUDE_RECUBRIMIENTO_CLASES_H_
+#ifndef INCLUDE_RC_DATETIME_H_
+#define INCLUDE_RC_DATETIME_H_
 
 //  Copyright Joel de Guzman 2002-2004. Distributed under the Boost
 //  Software License, Version 1.0. (See accompanying file LICENSE_1_0.txt
@@ -125,4 +125,4 @@ struct datetime2ptime {
 };
 }
 
-#endif /* INCLUDE_RECUBRIMIENTO_CLASES_H_ */
+#endif /* INCLUDE_RC_DATETIME_H_ */

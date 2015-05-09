@@ -38,22 +38,22 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: recubrimiento_clases.so
+all: rc_datetime.so
 
 dependents:
 	-cd /home/pedro/BoostPython/utiles/Release && $(MAKE) clean all
 
 # Tool invocations
-recubrimiento_clases.so: $(OBJS) $(USER_OBJS) /home/pedro/BoostPython/utiles/Release/libutiles.a
+rc_datetime.so: $(OBJS) $(USER_OBJS) /home/pedro/BoostPython/utiles/Release/libutiles.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/pedro/BoostPython/utiles/Release" -fPIC -shared -Wl,-soname=hello_ext.so -o "recubrimiento_clases.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/pedro/BoostPython/utiles/Release" -fPIC -shared -Wl,-soname=hello_ext.so -o "rc_datetime.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS) recubrimiento_clases.so
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS) rc_datetime.so
 	-@echo ' '
 
 .PHONY: all clean dependents
