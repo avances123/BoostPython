@@ -23,7 +23,9 @@ int main() {
 	std::vector<double> mis_datos;
 	mis_datos+=0,1,2,3,4,5,6,7,8,matematicas::INVALIDO,matematicas::INVALIDO;
 
-	boost::local_time::local_date_time fecha=utiles::fechas::ConstruirFecha(2014,1,5);
+	//boost::local_time::local_date_time fecha=utiles::fechas::ConstruirFecha(2014,1,5);
+
+	auto fecha=utiles::fechas::ConstruirFechaSinZOnaHoraria(2014,1,5);
 
 	SerieHistorica serie_historica(mis_datos,fecha);
 

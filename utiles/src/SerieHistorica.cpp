@@ -10,7 +10,7 @@
 namespace utiles {
 
 SerieHistorica::SerieHistorica(const std::vector<double> &serie,
-		const boost::local_time::local_date_time &fecha_inicio) :
+		const boost::posix_time::ptime &fecha_inicio) :
 		vector(serie), fecha_inicio(fecha_inicio) {
 
 }
@@ -31,8 +31,8 @@ void SerieHistorica::Redimensionar(
 	this->erase(this->begin(), this->begin() + inicio_valores);
 }
 */
-boost::local_time::local_date_time SerieHistorica::UltimaFechaValida() const{
-	auto ultima_fecha_valida = boost::local_time::local_date_time(
+boost::posix_time::ptime SerieHistorica::UltimaFechaValida() const{
+	auto ultima_fecha_valida = boost::posix_time::ptime(
 			boost::local_time::not_a_date_time);
 	auto it =
 			std::find_if(this->rbegin(), this->rend(),

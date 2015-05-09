@@ -24,11 +24,11 @@ public:
 	SerieHistorica();
 
 	SerieHistorica(const std::vector<double> &serie,
-			const boost::local_time::local_date_time &fecha_inicio);
+			const boost::posix_time::ptime &fecha_inicio);
 
 	//void Redimensionar(const boost::local_time::local_time_period &periodo);
 
-	boost::local_time::local_date_time UltimaFechaValida() const;
+	boost::posix_time::ptime UltimaFechaValida() const;
 
 	using vector::operator[];
 	using vector::begin;
@@ -42,7 +42,7 @@ public:
 //	SerieHistorica operator*(const SerieHistorica &) const;
 //	SerieHistorica operator+(const SerieHistorica &) const;
 private:
-	boost::local_time::local_date_time fecha_inicio;
+	boost::posix_time::ptime fecha_inicio;
 
 };
 
