@@ -42,6 +42,8 @@ public:
 	using vector::reverse_iterator;
 	using vector::const_iterator;
 	using vector::const_reverse_iterator;
+	using vector::at;
+	using vector::size_type;
 
 	bool operator==(SerieHistorica const& otra_serie_historica) const;
 

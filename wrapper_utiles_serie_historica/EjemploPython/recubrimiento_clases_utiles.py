@@ -5,31 +5,41 @@ import datetime
 import wrapper_utiles_serie_historica as rc
 import __future__
 
+def Mostrar(serie_historica):
+    print("\nFecha: {};\nDescripcion: {};\nElementos: [".format(serie_historica.UltimaFechaValida(),serie_historica.Descripcion))
+    for elemento in serie_historica: 
+        print (" {},".format(elemento))
+    else:   
+        print ("]")
+
 # # Definimos 
 dia_de_hoy=datetime.datetime.today()
+serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1,2,3]),dia_de_hoy,"Serie 1") 
+serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10,20,30,40]),dia_de_hoy,"Serie 2") 
 
-mi_serie_historica=rc.SerieHistorica(np.array([1,2,3,4,6]),dia_de_hoy,"Serie sin conversores")
+# Demostramos el acceso a los elementos
+Mostrar(serie_historica_01)
 
+# Slice
+print ("\nSlice de la Serie Historica: {}".format(np.array_str(serie_historica_02[::-1])))
 
-print ("Fecha primera del historico:.{}".format(mi_serie_historica.UltimaFechaValida()))
-for elemento in mi_serie_historica:
-    elemento=elemento*2
-    print (" {},".format(elemento))
+# Enumerate
+print ("\nProbamos enumerate, numero de elementos de la serie historica: {}".format(serie_historica_02.__len__()))
+for index,valor in enumerate(serie_historica_02):
+    print ("[Index: {},Valor: {}]".format(index,valor))
+
+# Demostramos que podemos cambiar la descripccion
+serie_historica_01.Descripcion="Cambio de descripcion de la serie 1"
+Mostrar(serie_historica_01)
     
-
-serie_historica_por_conversores=rc.SerieHistoricaPorConversores(np.array([8,6,9]),dia_de_hoy,"Serie con conversores")   
-print ("Fecha primera del historico:.{}".format(serie_historica_por_conversores.UltimaFechaValida()))
-for elemento in serie_historica_por_conversores:
-    print (" {},".format(elemento))
-    
+# Contenedor de series historicas    
 contenedor_series_historicas=rc.VectorSeriesHistoricas()
-contenedor_series_historicas.append(serie_historica_por_conversores)
-serie_historica_por_conversores_v2=rc.SerieHistoricaPorConversores(np.array([1,1,2]),dia_de_hoy,"Serie con conversores 2") 
-serie_historica_por_conversores_v2.Descripcion="He cambiado la descripcion"
-contenedor_series_historicas.append(serie_historica_por_conversores_v2)
+contenedor_series_historicas.append(serie_historica_01)
+contenedor_series_historicas.append(serie_historica_02)
 
-for series in contenedor_series_historicas:
-    print ("La descripcion de la serie es: {}".format(series.Descripcion))
-    for elemento in series:
-        print (" {},".format(elemento))
+# Acceso por unitario al contenedor
+Mostrar(contenedor_series_historicas[1])
+
+
+
     
