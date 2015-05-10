@@ -3,9 +3,9 @@
 
 using namespace boost::python;
 
-namespace python_boost_date_time {
+namespace convertidores {
 
-PyObject* python_boost_date_time::ptime2datetime::convert(
+PyObject* convertidores::ptime2datetime::convert(
 		boost::posix_time::ptime const&t) {
 	auto d = t.date();
 	auto tod = t.time_of_day();

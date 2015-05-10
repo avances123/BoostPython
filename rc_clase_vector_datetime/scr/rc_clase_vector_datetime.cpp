@@ -1,4 +1,5 @@
 #include "include/envoltorio_datetime.h"
+#include "include/envoltorio_objetos_iterables.h"
 #include "include/SerieHistorica.h"
 
 using namespace boost::python;
@@ -33,7 +34,8 @@ public:
 BOOST_PYTHON_MODULE(rc_clase_vector_datetime)
 {
 
-	python_boost_date_time::ConvertidoresDatetime();
+	convertidores::ConvertidoresDatetime();
+	convertidores::ConvertidoresVectorDouble();
 	numeric::array::set_module_and_type("numpy", "ndarray");
 
 
@@ -42,6 +44,12 @@ BOOST_PYTHON_MODULE(rc_clase_vector_datetime)
 		.def("UltimaFechaValida",&rc_clase_vector_datetime::WrapeerSerieHistorica::UltimaFechaValida)
 		.def("__iter__", iterator<rc_clase_vector_datetime::WrapeerSerieHistorica >())// Add a regular member function.
 				;
+
+	class_<utiles::SerieHistorica>("SerieHistoricaPorConversores",
+					init<std::vector<double>,boost::posix_time::ptime const&>())
+			.def("UltimaFechaValida",&utiles::SerieHistorica::UltimaFechaValida)
+			.def("__iter__", iterator<utiles::SerieHistorica >())// Add a regular member function.
+					;
 
 }
 

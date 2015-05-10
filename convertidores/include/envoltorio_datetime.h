@@ -49,7 +49,7 @@ using namespace boost::python;
 //https://github.com/jktjkt/deska/blob/master/src/deska/LowLevelPyDeska/DateTimeConversions.cpp
 //
 
-namespace python_boost_date_time {
+namespace convertidores {
 
 /**
  * Clase Publica Conversor de un objeto c++ to python
