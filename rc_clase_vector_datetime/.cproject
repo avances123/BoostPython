@@ -132,7 +132,6 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.1850766876" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.784823492" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1762479297" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/python_boost_date_time}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/convertidores}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/utiles}&quot;"/>
 									<listOptionValue builtIn="false" value="/usr/include/python2.7"/>
@@ -145,7 +144,6 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.996042320" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.1165020695" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1923092926" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/python_boost_date_time}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/convertidores}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/utiles}&quot;"/>
 								</option>
@@ -160,9 +158,8 @@
 								<option id="gnu.cpp.link.option.other.478312372" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other"/>
 								<option id="gnu.cpp.link.option.soname.1926493147" name="Shared object name (-Wl,-soname=)" superClass="gnu.cpp.link.option.soname" value="conversores.so" valueType="string"/>
 								<option id="gnu.cpp.link.option.paths.66073508" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/python_boost_date_time/Release Estatico}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/convertidores/Release Estatico}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/utiles/Release Estatico}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/utiles/Release Posicion Independiente}&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.1935449703" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="convertidores"/>
@@ -177,7 +174,6 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.1681026183" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
 								<option id="gnu.both.asm.option.include.paths.1576842742" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/python_boost_date_time}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/convertidores}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/utiles}&quot;"/>
 								</option>

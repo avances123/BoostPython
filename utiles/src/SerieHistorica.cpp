@@ -10,8 +10,8 @@
 namespace utiles {
 
 SerieHistorica::SerieHistorica(const std::vector<double> &serie,
-		const boost::posix_time::ptime &fecha_inicio, std::string descripcion) :
-		vector(serie), fecha_inicio(fecha_inicio), descripcion(descripcion) {
+		const boost::posix_time::ptime &fecha_inicio) :
+		vector(serie), fecha_inicio(fecha_inicio), descripcion("Todo") {
 
 }
 

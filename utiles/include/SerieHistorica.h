@@ -24,7 +24,7 @@ public:
 	SerieHistorica();
 
 	SerieHistorica(const std::vector<double> &serie,
-			const boost::posix_time::ptime &fecha_inicio,std::string descripcion="");
+			const boost::posix_time::ptime &fecha_inicio);
 
 	//void Redimensionar(const boost::local_time::local_time_period &periodo);
 
