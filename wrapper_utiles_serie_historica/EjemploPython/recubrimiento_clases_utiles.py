@@ -12,6 +12,13 @@ def Mostrar(serie_historica):
     else:   
         print ("]")
 
+def SerieHistoricaStr(objeto):
+    return str("Representacion str: {}".format(np.array_str(objeto[:])))
+
+
+def SumaElementos(objeto,entero):
+    return rc.SerieHistoricaPorConversores(objeto[:]+entero,objeto.UltimaFechaValida(),"Suma de {} a la serie con descripcion: {}".format(entero,objeto.Descripcion))
+
 # # Definimos 
 dia_de_hoy=datetime.datetime.today()
 serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1,2,3]),dia_de_hoy,"Serie 1") 
@@ -19,6 +26,17 @@ serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10,20,30,40]),dia_d
 
 # Demostramos el acceso a los elementos
 Mostrar(serie_historica_01)
+
+# Demostramos como se puede ir implementando metodos
+rc.SerieHistoricaPorConversores.__repr__=SerieHistoricaStr
+print (serie_historica_01)
+
+rc.SerieHistoricaPorConversores.SumaElementos=SumaElementos
+Mostrar(SumaElementos(serie_historica_01,100))
+
+
+rc.SerieHistoricaPorConversores.__add__=SumaElementos
+Mostrar(serie_historica_02+203)
 
 # Slice
 print ("\nSlice de la Serie Historica: {}".format(np.array_str(serie_historica_02[::-1])))
