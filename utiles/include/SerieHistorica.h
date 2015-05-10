@@ -24,11 +24,14 @@ public:
 	SerieHistorica();
 
 	SerieHistorica(const std::vector<double> &serie,
-			const boost::posix_time::ptime &fecha_inicio);
+			const boost::posix_time::ptime &fecha_inicio,std::string descripcion="");
 
 	//void Redimensionar(const boost::local_time::local_time_period &periodo);
 
 	boost::posix_time::ptime UltimaFechaValida() const;
+
+	std::string GetDescripcion();
+	void SetDescripcion(std::string descripcion);
 
 	using vector::operator[];
 	using vector::begin;
@@ -36,6 +39,10 @@ public:
 	using vector::empty;
 	using vector::size;
 	using vector::back;
+	using vector::iterator;
+	using vector::reverse_iterator;
+	using vector::const_iterator;
+	using vector::const_reverse_iterator;
 
 //	typedef boost::filter_iterator<utiles::matematicas::EsInvalido(), double> FiltradoDatosInvalidosIterador;
 
@@ -43,6 +50,7 @@ public:
 //	SerieHistorica operator+(const SerieHistorica &) const;
 private:
 	boost::posix_time::ptime fecha_inicio;
+	std::string descripcion;
 
 };
 
