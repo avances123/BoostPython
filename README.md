@@ -17,10 +17,6 @@ LICENSE	Initial commit
   - **convertidores:** Libreria principal donde está los conversores para que el wrapper sea limpio
   - **wrapper_utiles_serie_historica:** Wrapper de utiles::SerieHistorica utilizando los conversores de la libreria convertidores
 
-## Que puede faltar u objetivos...
-  - Para empezar, una clase que utilice la la clase SerieHistorica(por ejemplo,una libreria de utiles matematicas) y poder embeberla,claro...
-  - Una SerieHistoricaSuperior que herede de la primera SerieHistorica y poder embeberla...
-
 ## Donde está?
 El codigo está integro en: https://github.com/pvalienteverde/BoostPython
 
