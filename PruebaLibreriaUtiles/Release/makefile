@@ -41,13 +41,13 @@ endif
 all: PruebaLibreriaUtiles
 
 dependents:
-	-cd /home/pedro/workspaceBoostPython/utiles/Release && $(MAKE) all
+	-cd /home/pedro/Documents/BoostPython/utiles/Release && $(MAKE) clean all
 
 # Tool invocations
-PruebaLibreriaUtiles: $(OBJS) $(USER_OBJS) /home/pedro/workspaceBoostPython/utiles/Release/libutiles.a
+PruebaLibreriaUtiles: $(OBJS) $(USER_OBJS) /home/pedro/Documents/BoostPython/utiles/Release/libutiles.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/pedro/workspaceBoostPython/utiles/Release" -o "PruebaLibreriaUtiles" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/pedro/Documents/BoostPython/utiles/Release" -o "PruebaLibreriaUtiles" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -58,6 +58,6 @@ clean:
 
 .PHONY: all clean dependents
 .SECONDARY:
-/home/pedro/workspaceBoostPython/utiles/Release/libutiles.a:
+/home/pedro/Documents/BoostPython/utiles/Release/libutiles.a:
 
 -include ../makefile.targets

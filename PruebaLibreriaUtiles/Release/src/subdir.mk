@@ -17,7 +17,7 @@ CPP_DEPS += \
 src/PruebaLibreriaUtiles.o: ../src/PruebaLibreriaUtiles.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I"/home/pedro/workspaceBoostPython/utiles" -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/PruebaLibreriaUtiles.d" -o "$@" "$<"
+	g++ -I"/home/pedro/Documents/BoostPython/utiles" -O3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"src/PruebaLibreriaUtiles.d" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

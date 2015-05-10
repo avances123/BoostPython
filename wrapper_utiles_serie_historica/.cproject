@@ -105,11 +105,13 @@
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/python_boost_date_time"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/rc_clase_01"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/rc_clase_vector_datetime"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/wrapper_utiles_serie_historica"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/python_boost/Release"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/python_boost_date_time/Release"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/rc_clase_01/Release"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/rc_clase_vector_datetime/Release"/>
-						<entry flags="RESOLVED" kind="libraryFile" name="rc_clase_vector_datetime" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/wrapper_utiles_serie_historica/Release"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="wrapper_utiles_serie_historica" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 				<extensions>
@@ -122,7 +124,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="so" artifactName="rc_clase_vector_datetime" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.365212200" name="Release" parent="cdt.managedbuild.config.gnu.exe.release" postannouncebuildStep="" postbuildStep="">
+				<configuration artifactExtension="so" artifactName="wrapper_utiles_serie_historica" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.365212200" name="Release" parent="cdt.managedbuild.config.gnu.exe.release" postannouncebuildStep="" postbuildStep="">
 					<folderInfo id="cdt.managedbuild.config.gnu.exe.release.365212200." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.2001165487" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.release">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.exe.release.1280686966" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.release"/>

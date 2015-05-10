@@ -10,8 +10,8 @@
 namespace utiles {
 
 SerieHistorica::SerieHistorica(const std::vector<double> &serie,
-		const boost::posix_time::ptime &fecha_inicio) :
-		vector(serie), fecha_inicio(fecha_inicio), descripcion("Todo") {
+		const boost::posix_time::ptime &fecha_inicio,std::string descripcion) :
+		vector(serie), fecha_inicio(fecha_inicio), descripcion(descripcion) {
 
 }
 
@@ -26,6 +26,15 @@ std::string SerieHistorica::GetDescripcion() {
 void SerieHistorica::SetDescripcion(std::string descripcion) {
 	this->descripcion=descripcion;
 }
+
+bool SerieHistorica::operator==(SerieHistorica const& otra_serie_historica) const{
+	bool iguales=false;
+	if (otra_serie_historica.UltimaFechaValida()==this->UltimaFechaValida() and otra_serie_historica.size()==this->size())
+		iguales=true;
+	return iguales;
+}
+
+
 /*
  void SerieHistorica::Redimensionar(
  const boost::local_time::local_time_period &periodo) {

@@ -27,9 +27,10 @@ int main() {
 
 	auto fecha=utiles::fechas::ConstruirFechaSinZOnaHoraria(2014,1,5);
 
-	SerieHistorica serie_historica(mis_datos,fecha);
+	SerieHistorica serie_historica(mis_datos,fecha,"Prueba 1");
 
 
+	std::cout<<"Descripcion de la serie historica: "<<serie_historica.GetDescripcion()<<std::endl;
 	for(auto x:serie_historica){
 		std::cout<<x<<",";
 	}
@@ -37,6 +38,9 @@ int main() {
 
 
 	std::cout<<serie_historica.UltimaFechaValida()<<std::endl;
+
+	serie_historica.SetDescripcion("Hemos cambiado de nombre");
+	std::cout<<"Descripcion 2 de la serie historica: "<<serie_historica.GetDescripcion()<<std::endl;
 
 
 
