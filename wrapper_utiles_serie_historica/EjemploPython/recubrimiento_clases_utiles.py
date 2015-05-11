@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import wrapper_utiles_serie_historica as rc
-import __future__
+
 
 def Mostrar(serie_historica):
     print("\nFecha: {};\nDescripcion: {};\nElementos: [".format(serie_historica.UltimaFechaValida(),serie_historica.Descripcion))
@@ -21,8 +21,8 @@ def SumaElementos(objeto,entero):
 
 # # Definimos 
 dia_de_hoy=datetime.datetime.today()
-serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1,2,3]),dia_de_hoy,"Serie 1") 
-serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10,20,30,40]),dia_de_hoy,"Serie 2") 
+serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1.0,2.0,3.0]),dia_de_hoy,"Serie 1") 
+serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10.0,20.0,30.0,40.0]),dia_de_hoy,"Serie 2") 
 
 # Demostramos el acceso a los elementos
 Mostrar(serie_historica_01)
@@ -58,7 +58,6 @@ contenedor_series_historicas.append(serie_historica_02)
 # Acceso por unitario al contenedor
 Mostrar(contenedor_series_historicas[1])
 
-<<<<<<< HEAD
 # Demostramos que una vez que se decine una clase, el wrapper se mantiene
 por_defecto=rc.GenerarPorDefecto(contenedor_series_historicas[1])
 Mostrar(por_defecto)
@@ -67,12 +66,8 @@ Mostrar(por_defecto)
 rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
 serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
 
-=======
-rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
-serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
 
 
->>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 
 
     
