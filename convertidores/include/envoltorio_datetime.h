@@ -35,7 +35,6 @@
 #include <list>
 #include <vector>
 #include <algorithm>
-#include <numpy/ndarrayobject.h>
 #include <boost/assign/std/vector.hpp>
 #include <boost/uuid/uuid.hpp>
 #include <boost/date_time.hpp>

@@ -30,6 +30,8 @@ public:
 
 	boost::posix_time::ptime UltimaFechaValida() const;
 
+	SerieHistorica Copiar();
+
 	std::string GetDescripcion();
 	void SetDescripcion(std::string descripcion);
 	using vector::operator[];

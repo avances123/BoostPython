@@ -34,6 +34,10 @@ bool SerieHistorica::operator==(SerieHistorica const& otra_serie_historica) cons
 	return iguales;
 }
 
+SerieHistorica SerieHistorica::Copiar(){
+	return SerieHistorica(*this);
+}
+
 
 /*
  void SerieHistorica::Redimensionar(
