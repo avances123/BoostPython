@@ -13,7 +13,7 @@ def Mostrar(serie_historica):
         print ("]")
 
 def SerieHistoricaStr(objeto):
-    return str("Representacion str: {}".format(np.array_str(objeto[:])))
+    return str("Representacion str: {}r".format(np.array_str(objeto[:])))
 
 
 def SumaElementos(objeto,entero):
@@ -57,6 +57,10 @@ contenedor_series_historicas.append(serie_historica_02)
 
 # Acceso por unitario al contenedor
 Mostrar(contenedor_series_historicas[1])
+
+rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
+serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
+
 
 
 

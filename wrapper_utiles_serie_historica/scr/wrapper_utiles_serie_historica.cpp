@@ -5,7 +5,9 @@
 #include <boost/range/algorithm.hpp>
 #include <boost/range/irange.hpp>
 #include <boost/python/slice.hpp>
+#include <boost/assign/std/vector.hpp>
 
+using namespace boost::assign;
 using namespace boost::python;
 
 namespace rc_clase_vector_datetime {
@@ -63,6 +65,14 @@ int TamanoSerieHistorica(const utiles::SerieHistorica& self){
 	return self.size();
 }
 
+utiles::SerieHistorica ComponemosSerieHistorica(utiles::SerieHistorica const&serie){
+	std::vector<double> mis_datos;
+		mis_datos+=0.0,0.0,0.0,0.0,0.0;
+
+		utiles::SerieHistorica serie_historica(mis_datos,serie.UltimaFechaValida(),"Por Defecto");
+		return serie_historica;
+}
+
 //https://wiki.python.org/moin/boost.python
 //http://www.boost.org/doc/libs/1_53_0/libs/python/doc/v2/indexing.html
 // ejemplos: https://github.com/TNG/boost-python-examples
@@ -95,6 +105,9 @@ BOOST_PYTHON_MODULE(wrapper_utiles_serie_historica)
 	// Ejemplo de como implementar un contenedor de tal objeto en un vector: http://www.boost.org/doc/libs/1_42_0/libs/python/test/vector_indexing_suite.cpp
 	class_<std::vector<utiles::SerieHistorica> >("VectorSeriesHistoricas").def(
 			vector_indexing_suite<std::vector<utiles::SerieHistorica> >());
+
+	// Probamos que se realiza un wrapper automaticamente
+	def("GenerarPorDefecto",&ComponemosSerieHistorica);
 
 }
 
