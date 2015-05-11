@@ -21,8 +21,8 @@ def SumaElementos(objeto,entero):
 
 # # Definimos 
 dia_de_hoy=datetime.datetime.today()
-serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1,2,3]),dia_de_hoy,"Serie 1") 
-serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10,20,30,40]),dia_de_hoy,"Serie 2") 
+serie_historica_01=rc.SerieHistoricaPorConversores(np.array([1.0,2.0,3.0]),dia_de_hoy,"Serie 1") 
+serie_historica_02=rc.SerieHistoricaPorConversores(np.array([10.0,20.0,30.0,40.0]),dia_de_hoy,"Serie 2") 
 
 # Demostramos el acceso a los elementos
 Mostrar(serie_historica_01)

@@ -58,7 +58,8 @@ void iterador_convertible::construct(PyObject* object,
 }
 
 void ConvertidoresVectorDouble(){
-	iterador_convertible().from_python<std::vector<double>>();
+	iterador_convertible().from_python<std::vector<double>>().from_python<std::vector<int>>();
 }
+
 
 } /* namespace conversores */
