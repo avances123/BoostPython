@@ -13,7 +13,7 @@ def Mostrar(serie_historica):
         print ("]")
 
 def SerieHistoricaStr(objeto):
-    return str("Representacion str: {}".format(np.array_str(objeto[:])))
+    return str("Representacion str: {}r".format(np.array_str(objeto[:])))
 
 
 def SumaElementos(objeto,entero):
@@ -58,6 +58,7 @@ contenedor_series_historicas.append(serie_historica_02)
 # Acceso por unitario al contenedor
 Mostrar(contenedor_series_historicas[1])
 
+<<<<<<< HEAD
 # Demostramos que una vez que se decine una clase, el wrapper se mantiene
 por_defecto=rc.GenerarPorDefecto(contenedor_series_historicas[1])
 Mostrar(por_defecto)
@@ -66,6 +67,12 @@ Mostrar(por_defecto)
 rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
 serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
 
+=======
+rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
+serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
+
+
+>>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 
 
     

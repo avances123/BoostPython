@@ -5,7 +5,10 @@
 #include <boost/range/algorithm.hpp>
 #include <boost/range/irange.hpp>
 #include <boost/python/slice.hpp>
+<<<<<<< HEAD
 #include "python2.7/frameobject.h"
+=======
+>>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 #include <boost/assign/std/vector.hpp>
 
 using namespace boost::assign;
@@ -66,14 +69,24 @@ int TamanoSerieHistorica(const utiles::SerieHistorica& self){
 	return self.size();
 }
 
+<<<<<<< HEAD
 
 utiles::SerieHistorica ComponemosSerieHistorica(utiles::SerieHistorica const&serie){
 	std::vector<double> mis_datos;
 		mis_datos+=0,0,0,0,0,0,0,0,0;
+=======
+utiles::SerieHistorica ComponemosSerieHistorica(utiles::SerieHistorica const&serie){
+	std::vector<double> mis_datos;
+		mis_datos+=0.0,0.0,0.0,0.0,0.0;
+>>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 
 		utiles::SerieHistorica serie_historica(mis_datos,serie.UltimaFechaValida(),"Por Defecto");
 		return serie_historica;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 //https://wiki.python.org/moin/boost.python
 //http://www.boost.org/doc/libs/1_53_0/libs/python/doc/v2/indexing.html
 // ejemplos: https://github.com/TNG/boost-python-examples
@@ -117,7 +130,12 @@ BOOST_PYTHON_MODULE(wrapper_utiles_serie_historica)
 	class_<std::vector<utiles::SerieHistorica> >("VectorSeriesHistoricas").def(
 			vector_indexing_suite<std::vector<utiles::SerieHistorica> >());
 
+<<<<<<< HEAD
 	// Desde dataframe : http://stackoverflow.com/questions/6116345/boostpython-possible-to-automatically-convert-from-dict-stdmap
+=======
+	// Probamos que se realiza un wrapper automaticamente
+	def("GenerarPorDefecto",&ComponemosSerieHistorica);
+>>>>>>> ee47d57492cf4b12b61d52a5d7173f8d2f71dd1f
 
 }
 
