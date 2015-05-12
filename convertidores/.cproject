@@ -13,15 +13,15 @@
 					</externalSetting>
 				</externalSettings>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="a" artifactName="convertidores" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.365212200.1673382043" name="Release Estatico" parent="cdt.managedbuild.config.gnu.exe.release" postannouncebuildStep="" postbuildStep="">
+				<configuration artifactExtension="a" artifactName="convertidores" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.365212200.1673382043" name="Release Estatico" parent="cdt.managedbuild.config.gnu.exe.release" postannouncebuildStep="" postbuildStep="">
 					<folderInfo id="cdt.managedbuild.config.gnu.exe.release.365212200.1673382043." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.1930523700" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.release">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.exe.release.1550535948" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.release"/>
@@ -32,6 +32,7 @@
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1332443103" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1928146111" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/include/python3.3m"/>
+									<listOptionValue builtIn="false" value="/usr/include/python3.4m"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.other.other.644293690" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++11 -fPIC" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.577027716" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -96,6 +97,9 @@
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.365212200;cdt.managedbuild.config.gnu.exe.release.365212200.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1685954534;cdt.managedbuild.tool.gnu.cpp.compiler.input.350733524">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.206607912;cdt.managedbuild.config.gnu.exe.debug.206607912.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.260905975;cdt.managedbuild.tool.gnu.cpp.compiler.input.1570081584">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
@@ -103,15 +107,6 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.365212200;cdt.managedbuild.config.gnu.exe.release.365212200.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.619351707;cdt.managedbuild.tool.gnu.c.compiler.input.1450355120">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.365212200.1673382043;cdt.managedbuild.config.gnu.exe.release.365212200.1673382043.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.316595011;cdt.managedbuild.tool.gnu.c.compiler.input.555194380">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.365212200.1673382043;cdt.managedbuild.config.gnu.exe.release.365212200.1673382043.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.568454820;cdt.managedbuild.tool.gnu.cpp.compiler.input.577027716">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.365212200;cdt.managedbuild.config.gnu.exe.release.365212200.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1685954534;cdt.managedbuild.tool.gnu.cpp.compiler.input.350733524">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
