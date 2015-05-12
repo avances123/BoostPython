@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import datetime
 import wrapper_utiles_serie_historica as rc
-import __future__
 
 def Mostrar(serie_historica):
     print("\nFecha: {};\nDescripcion: {};\nElementos: [".format(serie_historica.UltimaFechaValida(),serie_historica.Descripcion))
@@ -58,6 +57,8 @@ contenedor_series_historicas.append(serie_historica_02)
 # Acceso por unitario al contenedor
 Mostrar(contenedor_series_historicas[1])
 
+por_defecto=rc.GenerarPorDefecto(contenedor_series_historicas[1])
+Mostrar(por_defecto)
 rango = pd.date_range(contenedor_series_historicas[1].UltimaFechaValida(), periods=contenedor_series_historicas[1].__len__(), freq='H')
 serie = pd.Series(contenedor_series_historicas[1][:], index=rango)
 

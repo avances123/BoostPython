@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>utiles</project>
-		<project>python_boost_date_time</project>
 		<project>convertidores</project>
 	</projects>
 	<buildSpec>

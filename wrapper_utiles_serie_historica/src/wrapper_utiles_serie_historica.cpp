@@ -65,6 +65,7 @@ int TamanoSerieHistorica(const utiles::SerieHistorica& self){
 	return self.size();
 }
 
+
 utiles::SerieHistorica ComponemosSerieHistorica(utiles::SerieHistorica const&serie){
 	std::vector<double> mis_datos;
 		mis_datos+=0.0,0.0,0.0,0.0,0.0;
@@ -80,7 +81,9 @@ BOOST_PYTHON_MODULE(wrapper_utiles_serie_historica)
 {
 
 	convertidores::ConvertidoresDatetime();
-	convertidores::ConvertidoresVectorDouble();
+	convertidores::iterador_convertible()
+			.from_python<std::vector<double> >().from_python<std::vector<long> >().from_python<std::vector<int> >().from_python<std::vector<float> >();
+
 	numeric::array::set_module_and_type("numpy", "ndarray");
 
 	// Prueba de concepto, pero la buena es la siguiente que utiliza todos los conversores
@@ -100,11 +103,18 @@ BOOST_PYTHON_MODULE(wrapper_utiles_serie_historica)
 			.def("__getitem__",&GetItemSerieHistorica)
 			.def("__getitem__",&GetItemSliceSerieHistorica)
 			.def("__len__",&TamanoSerieHistorica)
+			.def("Copiar",&utiles::SerieHistorica::Copiar)
+			.def("CrearPorDefecto",&ComponemosSerieHistorica)
 			.add_property("Descripcion",&utiles::SerieHistorica::GetDescripcion,&utiles::SerieHistorica::SetDescripcion);
+
+	// Probamos que se realiza un wrapper automaticamente
+	def("GenerarPorDefecto",&ComponemosSerieHistorica);
 
 	// Ejemplo de como implementar un contenedor de tal objeto en un vector: http://www.boost.org/doc/libs/1_42_0/libs/python/test/vector_indexing_suite.cpp
 	class_<std::vector<utiles::SerieHistorica> >("VectorSeriesHistoricas").def(
 			vector_indexing_suite<std::vector<utiles::SerieHistorica> >());
+
+	// Desde dataframe : http://stackoverflow.com/questions/6116345/boostpython-possible-to-automatically-convert-from-dict-stdmap
 
 	// Probamos que se realiza un wrapper automaticamente
 	def("GenerarPorDefecto",&ComponemosSerieHistorica);
